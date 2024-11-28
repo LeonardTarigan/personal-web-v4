@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import formatRelativeTime from "../lib/utils/formatRelativeTime";
+
+const blogs = await getCollection("blogs");
+---
+
+<BaseLayout title="Blogs | Leonard Tarigan">
+  <MainLayout name="BLOG" pronounciation="/bläg/">
+    <p slot="box" class="p-3">Est. 2024</p>
+    <section slot="content" class="w-full px-3">
+      <div
+        class="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+      >
+        {
+          blogs.map(({ data, slug, body }) => (
+            <a
+              href={`/blogs/${slug}`}
+              class="flex flex-col space-y-3 border border-neutral-800 p-3 transition-colors duration-300 hover:bg-neutral-200"
+            >
+              <Image
+                src={data.image}
+                alt={"Thumb"}
+                inferSize
+                class={"aspect-[4/3] w-full bg-neutral-200 object-cover"}
+              />
+              <div class="flex h-full flex-col justify-between text-base">
+                <div>
+                  <h3 class="line-clamp-1 text-lg font-semibold leading-tight">
+                    {data.title}
+                  </h3>
+                  <p class="mt-1 line-clamp-2 leading-tight">{body}</p>
+                </div>
+                <p class="pt-3 font-normal text-neutral-400">
+                  {formatRelativeTime(data.date)}
+                </p>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </MainLayout>
+</BaseLayout>

@@ -1,0 +1,53 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import { projects } from "../lib/static/projects.data";
+---
+
+<BaseLayout title="Works | Leonard Tarigan">
+  <MainLayout name="WORK" pronounciation="/wərk/">
+    <a
+      href="mailto:leontrg32@gmail.com"
+      target="_blank"
+      slot="box"
+      class="group relative z-0 flex items-center gap-1 overflow-hidden p-3 text-base transition-colors duration-300 hover:text-white"
+    >
+      <div
+        class="absolute -top-full left-0 -z-10 size-full bg-neutral-800 transition-all duration-300 group-hover:top-0"
+      >
+      </div>
+      <p>Let's Collab</p>
+      <Icon name={"arrow-up-right-icon"} />
+    </a>
+    <section slot="content" class="flex w-full flex-col items-center gap-16">
+      <p class="w-4/5 px-3 sm:w-2/3 md:w-1/2">
+        Here's a collection of projects I've worked on, from real-world builds
+        to fun practice pieces. Each one helped me level up my skills in web
+        development, design, and problem-solving. Check them out, and feel free
+        to reach out if something catches your eye!
+      </p>
+
+      <div
+        class="grid w-full grid-cols-1 divide-x divide-y divide-neutral-800 border-b border-neutral-800 sm:grid-cols-2 md:grid-cols-3"
+      >
+        {
+          projects.map(({ name, image }, index) => (
+            <div
+              class="space-y-2 p-3"
+              class:list={[{ "border-t border-neutral-800": index === 0 }]}
+            >
+              <Image
+                src={image}
+                alt="Thumbnail"
+                class="aspect-video w-full bg-neutral-200"
+              />
+              <p class="font-medium">{name}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </MainLayout>
+</BaseLayout>

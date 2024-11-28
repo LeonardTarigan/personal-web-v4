@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import { experiences } from "../lib/static/experience-data";
+import { Icon } from "astro-icon/components";
+
+const sortedExperience = experiences.sort((a, b) => {
+  if (a.endDate === null && b.endDate !== null) return -1;
+  if (a.endDate !== null && b.endDate === null) return 1;
+
+  return new Date(b.startDate).getTime() - new Date(a.startDate).getTime();
+});
+---
+
+<BaseLayout title="Experiences | Leonard Tarigan">
+  <MainLayout name="EXPERIENCE" pronounciation="/ik'spirēəns/">
+    <a
+      href="/files/resume.pdf"
+      target="_blank"
+      slot="box"
+      class="group relative flex items-center gap-1 overflow-hidden p-3 text-base transition-colors duration-300 hover:text-white"
+    >
+      <div
+        class="absolute -top-full left-0 -z-10 size-full bg-neutral-800 transition-all duration-300 group-hover:top-0"
+      >
+      </div>
+      <p>View My Resume</p>
+      <Icon name={"arrow-up-right-icon"} />
+    </a>
+    <section
+      slot="content"
+      class="mx-auto -mb-5 w-full max-w-screen-sm divide-y divide-neutral-700"
+    >
+      {
+        sortedExperience.map(
+          ({ company, title, startDate, endDate }, index) => (
+            <div
+              class="flex flex-col gap-5 px-3 pb-5 sm:flex-row sm:items-center sm:justify-between sm:px-0"
+              class:list={[{ "pt-5": index > 0 }]}
+            >
+              <div>
+                <p class="text-base leading-none">{company}</p>
+                <h3 class="text-xl font-semibold">{title}</h3>
+              </div>
+              <p class="text-end text-base sm:text-lg">
+                <span>{startDate}</span> - <span>{endDate ?? "Present"}</span>
+              </p>
+            </div>
+          ),
+        )
+      }
+    </section>
+  </MainLayout>
+</BaseLayout>

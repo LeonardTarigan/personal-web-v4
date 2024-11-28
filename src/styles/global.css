@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Onest:wght@100..900&display=swap");
+
+body {
+  @apply bg-white font-body text-lg font-light text-neutral-800;
+}
+
+::selection,
+::moz-selection {
+  @apply bg-neutral-800 text-white;
+}

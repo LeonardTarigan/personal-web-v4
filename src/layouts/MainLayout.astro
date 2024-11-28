@@ -1,0 +1,31 @@
+---
+interface Props {
+  name: string;
+  pronounciation: string;
+}
+
+const { name, pronounciation } = Astro.props;
+---
+
+<main class="flex flex-col items-center gap-16 pb-10">
+  <section class="flex w-full flex-col items-center text-center">
+    <div class="flex w-full justify-center border-b border-neutral-800 py-10">
+      <div class="flex w-max flex-col items-center">
+        <h2
+          class="w-fit font-header text-7xl font-normal leading-none tracking-tighter sm:text-9xl md:text-[150px]"
+        >
+          {name}
+        </h2>
+        <p class="ml-5 w-full text-start">
+          {pronounciation}
+        </p>
+      </div>
+    </div>
+
+    <div class="flex border-x border-b border-neutral-800">
+      <slot name="box" />
+    </div>
+  </section>
+
+  <slot name="content" />
+</main>

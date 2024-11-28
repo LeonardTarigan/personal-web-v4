@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import readingTime from "reading-time";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import formatRelativeTime from "../../lib/utils/formatRelativeTime";
+
+export const getStaticPaths = async () => {
+  const blogs = await getCollection("blogs");
+  const paths = blogs.map((blog) => ({
+    params: {
+      slug: blog.slug,
+    },
+    props: { blog },
+  }));
+
+  return paths;
+};
+
+interface Props {
+  blog: CollectionEntry<"blogs">;
+}
+
+const { blog } = Astro.props;
+const { data, body } = blog;
+const { text: readTime } = readingTime(body);
+
+const { Content } = await blog.render();
+---
+
+<BaseLayout title={data.title + " | Leonard Tarigan"}>
+  <main class="mx-auto max-w-screen-sm space-y-5 px-3 py-10">
+    <Image
+      src={data.image}
+      alt={"Thumb"}
+      inferSize
+      class={"aspect-[3/2] w-full bg-neutral-200 object-cover"}
+    />
+    <h2 class="text-3xl font-semibold sm:text-4xl">{data.title}</h2>
+    <div>
+      <p class="capitalize">{data.categories.join(", ")}</p>
+      <p class="text-base font-normal text-neutral-400">
+        {formatRelativeTime(data.date)} · {readTime}
+      </p>
+    </div>
+    <div class="prose prose-lg pt-10">
+      <Content />
+    </div>
+  </main>
+</BaseLayout>

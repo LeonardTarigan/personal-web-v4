@@ -1,0 +1,40 @@
+---
+import { Icon } from "astro-icon/components";
+import MobileMenu from "./MobileMenu.vue";
+import { navMenus } from "../../../lib/static/nav-menus";
+
+const currentPath = Astro.url.pathname;
+
+console.log(currentPath);
+---
+
+<nav
+  class="sticky top-0 z-50 flex items-center justify-between gap-5 border-b border-b-neutral-700 bg-white sm:overflow-hidden"
+>
+  <a
+    href="/"
+    class="flex aspect-square items-center justify-center bg-neutral-800 px-5 font-header text-2xl uppercase text-white"
+    >LT.</a
+  >
+
+  <ul class="hidden items-center text-sm font-medium uppercase sm:flex">
+    {
+      navMenus.map(({ href, label }) => (
+        <li>
+          <a
+            href={href}
+            class:list={[
+              "px-5 py-6 transition-colors duration-300",
+              { "bg-neutral-800 text-white": currentPath === href },
+              { "hover:bg-neutral-200": currentPath !== href },
+            ]}
+          >
+            {label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <MobileMenu client:load currentPath={currentPath} />
+</nav>

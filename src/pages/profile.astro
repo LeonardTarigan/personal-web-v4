@@ -1,0 +1,130 @@
+---
+import { Icon } from "astro-icon/components";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import ProfilePic from "../assets/pic.png";
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<BaseLayout title="Profile | Leonard Tarigan">
+  <MainLayout name="PROFILE" pronounciation="/'prōˌfīl/">
+    <div slot="box" class="flex divide-x divide-neutral-800">
+      <a
+        href="https://github.com/LeonardTarigan"
+        class="group relative overflow-hidden p-3 transition-colors duration-300 hover:text-white"
+        target="_blank"
+      >
+        <div
+          class="absolute -top-full left-0 -z-10 size-full bg-neutral-800 transition-all duration-300 group-hover:top-0"
+        >
+        </div>
+        <Icon name={"github-icon"} size={25} />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/leonardtarigan/"
+        class="group relative overflow-hidden p-3 transition-colors duration-300 hover:text-white"
+        target="_blank"
+      >
+        <div
+          class="absolute -top-full left-0 -z-10 size-full bg-neutral-800 transition-all duration-300 group-hover:top-0"
+        >
+        </div>
+        <Icon name={"linkedin-icon"} size={25} />
+      </a>
+      <a
+        href="https://www.instagram.com/leonardtarigannn/"
+        class="group relative overflow-hidden p-3 transition-colors duration-300 hover:text-white"
+        target="_blank"
+      >
+        <div
+          class="absolute -top-full left-0 -z-10 size-full bg-neutral-800 transition-all duration-300 group-hover:top-0"
+        >
+        </div>
+        <Icon name={"instagram-icon"} size={25} />
+      </a>
+      <a
+        href="https://x.com/asyncfnc"
+        class="group relative overflow-hidden p-3 transition-colors duration-300 hover:text-white"
+        target="_blank"
+      >
+        <div
+          class="absolute -top-full left-0 -z-10 size-full bg-neutral-800 transition-all duration-300 group-hover:top-0"
+        >
+        </div>
+        <Icon name={"x-icon"} size={25} />
+      </a>
+    </div>
+
+    <section slot="content" class="mx-auto w-full max-w-screen-sm px-3">
+      <Image
+        src={ProfilePic}
+        alt={"Pic"}
+        class="float-left mb-3 mr-3 size-32 border border-neutral-800 bg-neutral-200 sm:mr-7 sm:size-44 md:size-52"
+      />
+      <div class="space-y-5">
+        <p>
+          Hey folks! I'm Leonard Tarigan, a final-year Informatics Engineering
+          student from Indonesia with a big passion for software engineering.
+          I'm mostly focused on frontend work, and over the past year, I've
+          handled more than ten projects. Seeing an idea come to life on the
+          screen is something I really enjoy.
+        </p>
+        <p>
+          Lately, I've been expanding into backend and mobile development since
+          I'm aiming to become a full-stack developer. Learning how everything
+          works behind the scenes and building things end-to-end has been super
+          exciting. I'm always up for the challenge of figuring out how all the
+          pieces fit together to make a smooth, complete product.
+        </p>
+        <p>
+          Outside of coding, you'll usually find me playing guitar, gaming, or
+          exploring music. I'm a fan of everything, from progressive metal to
+          blues, pop, jazz, country, and rock. Different styles keep me inspired
+          both in music and in my work. Whether it's a new feature on a project
+          or a new song to learn, I'm all about creating something meaningful
+          and fun.
+        </p>
+
+        <p>
+          I'm always open for collaboration and love connecting with others who
+          are passionate about creating great products. Whether it's a unique
+          project idea, or something creative, feel free to reach out. Let's
+          build something cool together!
+        </p>
+        <div class="grid grid-cols-2 gap-3 sm:grid-cols-3">
+          <div>
+            <h3 class="font-semibold">Languages</h3>
+            <ul class="list-inside list-disc">
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>Go</li>
+              <li>Java</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold">Frameworks</h3>
+            <ul class="list-inside list-disc">
+              <li>React</li>
+              <li>Vue</li>
+              <li>Next.js</li>
+              <li>Nuxt.js</li>
+              <li>Astro</li>
+              <li>Tailwind CSS</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold">Others</h3>
+            <ul class="list-inside list-disc">
+              <li>Figma</li>
+              <li>Framer Motion</li>
+              <li>Ant Design</li>
+              <li>Material UI</li>
+              <li>Firebase</li>
+              <li>Supabase</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </MainLayout>
+</BaseLayout>
