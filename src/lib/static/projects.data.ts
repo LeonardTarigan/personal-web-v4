@@ -1,5 +1,5 @@
 // Import images directly
-import tedx2025Image from "../../assets/project-thumb-tedx.png";
+import tedx2025Image from "../../assets/project-thumb-tedx-2025.png";
 import tedx2023Image from "../../assets/project-thumb-tedx.png";
 import skyImage from "../../assets/project-thumb-sky.png";
 import dialinkImage from "../../assets/project-thumb-dialink.png";
