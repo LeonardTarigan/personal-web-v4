@@ -7,7 +7,7 @@ title: Mastering The Amend Flag
 
 Have you ever made a commit, only to realize you forgot to include some files, mistyped a message, or wished you could make a quick edit without adding a new commit? This is where the `git commit --amend` command shines. The `--amend` option allows you to modify the last commit, saving you from creating a new one just to fix a minor mistake.
 
-In this post, we’ll explore how to use the amend flag, its benefits, and when to use it (and when not to!).
+In this post, we’ll explore how to use the amend flag, its benefits, and when to use it (and when not to).
 
 ## Why Use The Amend Flag?
 
@@ -31,7 +31,7 @@ If you only want to change the last commit message, use:
 git commit --amend -m "New commit message"
 ```
 
-This command opens the editor (or directly updates the message if you use -m) where you can edit your commit message without affecting any code changes.
+This command opens the editor (or directly updates the message if you use the `-m` flag) where you can edit your commit message without affecting any code changes.
 
 ### 2. Adding New Changes to the Last Commit
 
