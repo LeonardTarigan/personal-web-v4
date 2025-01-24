@@ -9,7 +9,7 @@ export const experiences = [
     title: "Associate Software Engineer",
     company: "Magna Partners",
     startDate: "Jun 2024",
-    endDate: null,
+    endDate: "Jan 2025",
   },
   {
     title: "Frontend Engineer",
@@ -27,7 +27,7 @@ export const experiences = [
     title: "Head of Frontend Division",
     company: "POROS Organization of Open Source",
     startDate: "Feb 2024",
-    endDate: null,
+    endDate: "Feb 2025",
   },
   {
     title: "Web & Cloud Mentor",

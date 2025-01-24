@@ -5,7 +5,9 @@ import { navMenus } from "../../../lib/static/nav-menus";
 
 const currentPath = Astro.url.pathname;
 
-console.log(currentPath);
+const normalizePath = (path: string) => path.replace(/\/+$/, "");
+
+const normalizedCurrentPath = normalizePath(Astro.url.pathname);
 ---
 
 <nav
@@ -13,8 +15,8 @@ console.log(currentPath);
 >
   <a
     href="/"
-    class="flex aspect-square items-center justify-center bg-neutral-800 px-5 font-header text-2xl uppercase text-white"
-    >LT.</a
+    class="flex aspect-square items-center justify-center bg-neutral-800 px-5 font-header text-2xl font-bold uppercase text-white"
+    >力</a
   >
 
   <ul class="hidden items-center text-sm font-medium uppercase sm:flex">
@@ -25,8 +27,8 @@ console.log(currentPath);
             href={href}
             class:list={[
               "px-5 py-6 transition-colors duration-300",
-              { "bg-neutral-800 text-white": currentPath === href },
-              { "hover:bg-neutral-200": currentPath !== href },
+              { "bg-neutral-800 text-white": normalizedCurrentPath === href },
+              { "hover:bg-neutral-200": normalizedCurrentPath !== href },
             ]}
           >
             {label}
