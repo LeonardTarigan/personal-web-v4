@@ -1,7 +1,7 @@
 ---
 categories: ["frontend", "performance"]
 date: 02/04/2025
-image: https://img.freepik.com/free-photo/conceptual-research-with-keyboard-magnifier-wooden-cubes-black-desk-background-flat-lay-horizontal-image_176474-6277.jpg?t=st=1738687136~exp=1738690736~hmac=10085b95ac5ab982ac23acd729bd49c268a02db4ca6c15a91fe5360704e1e6b8&w=1060
+image: https://res.cloudinary.com/dtqfsisit/image/upload/v1738815182/debounce-for-better-input-performance_klzkrh.png
 title: Debounce for Better Input Performance
 ---
 

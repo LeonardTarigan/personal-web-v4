@@ -1,7 +1,7 @@
 ---
-categories: ["frontend", "seo"]
+categories: ["Frontend", "SEO"]
 date: 02/05/2025
-image: https://img.freepik.com/free-photo/young-woman-watching-live-stream_53876-102030.jpg?t=st=1738760314~exp=1738763914~hmac=1b3adcf8d93556d5876a8292f0937e8e2d831329771559635f2d5c57eada512d&w=1380
+image: https://res.cloudinary.com/dtqfsisit/image/upload/v1738815185/make-your-links-pop-with-og-tags_h68dyf.png
 title: Make Your Links Pop with OG Tags
 ---
 
