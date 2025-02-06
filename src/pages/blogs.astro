@@ -1,11 +1,11 @@
 ---
 import { Image } from "astro:assets";
-import { getCollection } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import formatRelativeTime from "../lib/utils/formatRelativeTime";
 
-const blogs = await getCollection("blogs");
+const blogs: CollectionEntry<"blogs">[] = await getCollection("blogs");
 const sortedBlogs = blogs.sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
 );
