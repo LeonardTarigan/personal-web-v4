@@ -29,7 +29,11 @@ const { text: readTime } = readingTime(body);
 const { Content } = await blog.render();
 ---
 
-<BaseLayout title={data.title + " | Leonard Tarigan"}>
+<BaseLayout
+  title={data.title + " | Leonard Tarigan"}
+  description={body.split("\n")[1]}
+  ogImage={data.image}
+>
   <main class="mx-auto max-w-screen-sm space-y-5 px-3 py-10">
     <Image
       src={data.image}
