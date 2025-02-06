@@ -1,4 +1,3 @@
-// Import images directly
 import tedx2025Image from "../../assets/project-thumb-tedx-2025.png";
 import tedx2023Image from "../../assets/project-thumb-tedx.png";
 import skyImage from "../../assets/project-thumb-sky.png";
@@ -6,17 +5,16 @@ import dialinkImage from "../../assets/project-thumb-dialink.png";
 import anizoneImage from "../../assets/project-thumb-anizone.png";
 import seekrImage from "../../assets/project-thumb-seekr.png";
 
-// Update projects array with imported images
 export const projects = [
   {
     name: "TEDxUniversitasBrawijaya 2025",
     image: tedx2025Image,
-    url: null,
+    url: "https://tedxuniversitasbrawijaya.org/",
   },
   {
     name: "TEDxUniversitasBrawijaya 2023",
     image: tedx2023Image,
-    url: null,
+    url: "https://tedxub2023.vercel.app/",
   },
   {
     name: "Sky",

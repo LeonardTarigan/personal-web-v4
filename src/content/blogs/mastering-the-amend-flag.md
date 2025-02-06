@@ -1,6 +1,6 @@
 ---
 categories: ["git", "version control"]
-date: 11/13/2024
+date: 01/20/2025
 image: https://miro.medium.com/v2/resize:fit:1200/1*8D7A2FuASSx_teHPGG9R0Q.jpeg
 title: Mastering The Amend Flag
 ---

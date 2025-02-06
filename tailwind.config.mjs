@@ -4,8 +4,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ["Onest", "sans-serif"],
+        body: ["Onest", "serif"],
         header: ["Oswald", "serif"],
+        japanese: ["Kosugi", "serif"],
       },
       colors: {
         white: "#FAF9F6",

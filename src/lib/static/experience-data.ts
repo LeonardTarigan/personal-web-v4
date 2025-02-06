@@ -48,6 +48,12 @@ export const experiences = [
     endDate: "Dec 2023",
   },
   {
+    title: "Member of Frontend Division",
+    company: "POROS Organization of Open Source",
+    startDate: "May 2023",
+    endDate: "Feb 2024",
+  },
+  {
     title: "OOP Lab Assistant",
     company: "FILKOM, University of Brawijaya",
     startDate: "Feb 2023",

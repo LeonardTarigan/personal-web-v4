@@ -1,11 +1,9 @@
 ---
-import { Icon } from "astro-icon/components";
-import MobileMenu from "./MobileMenu.vue";
 import { navMenus } from "../../../lib/static/nav-menus";
+import normalizePath from "../../../lib/utils/normalizePath";
+import MobileMenu from "./MobileMenu.vue";
 
 const currentPath = Astro.url.pathname;
-
-const normalizePath = (path: string) => path.replace(/\/+$/, "");
 
 const normalizedCurrentPath = normalizePath(Astro.url.pathname);
 ---
@@ -15,7 +13,7 @@ const normalizedCurrentPath = normalizePath(Astro.url.pathname);
 >
   <a
     href="/"
-    class="flex aspect-square items-center justify-center bg-neutral-800 px-5 font-header text-2xl font-bold uppercase text-white"
+    class="flex aspect-square items-center justify-center bg-neutral-800 px-5 font-japanese text-2xl font-bold uppercase text-white"
     >力</a
   >
 

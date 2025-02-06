@@ -9,7 +9,7 @@ import { projects } from "../lib/static/projects.data";
 <BaseLayout title="Works | Leonard Tarigan">
   <MainLayout name="WORK" pronounciation="ワーク">
     <a
-      href="mailto:leontrg32@gmail.com"
+      href="mailto:leonardtarigan.dev@gmail.com"
       target="_blank"
       slot="box"
       class="group relative z-0 flex items-center gap-1 overflow-hidden p-3 text-base transition-colors duration-300 hover:text-white"
@@ -33,9 +33,11 @@ import { projects } from "../lib/static/projects.data";
         class="grid w-full grid-cols-1 divide-x divide-y divide-neutral-800 border-b border-neutral-800 sm:grid-cols-2 md:grid-cols-3"
       >
         {
-          projects.map(({ name, image }, index) => (
-            <div
-              class="space-y-2 p-3"
+          projects.map(({ name, image, url }, index) => (
+            <a
+              href={url}
+              target="_blank"
+              class="group space-y-2 p-3 transition-colors duration-300 hover:bg-neutral-200"
               class:list={[{ "border-t border-neutral-800": index === 0 }]}
             >
               <Image
@@ -44,7 +46,7 @@ import { projects } from "../lib/static/projects.data";
                 class="aspect-video w-full bg-neutral-200"
               />
               <p class="font-medium">{name}</p>
-            </div>
+            </a>
           ))
         }
       </div>

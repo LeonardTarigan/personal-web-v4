@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Onest:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kosugi&family=Onest:wght@100..900&family=Oswald:wght@200..700&display=swap");
 
 body {
   @apply bg-white font-body text-lg font-light text-neutral-800;

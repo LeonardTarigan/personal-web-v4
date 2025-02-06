@@ -63,18 +63,17 @@ import MainLayout from "../layouts/MainLayout.astro";
       />
       <div class="space-y-5">
         <p>
-          Hey folks! I'm Leonard Tarigan, a final-year Informatics Engineering
+          Hello world! I'm Leonard Tarigan, a final-year Informatics Engineering
           student from Indonesia with a big passion for software engineering.
-          I'm mostly focused on frontend work. Over the past year, I've handled
-          more than ten projects. Seeing an idea come to life on the screen is
-          something I really enjoy.
+          I'm mostly focused on frontend works. Seeing an idea come to life on
+          the screen is something I really enjoy.
         </p>
         <p>
-          Lately, I've been expanding into backend and mobile development since
-          I'm aiming to become a full-stack developer. Learning how everything
-          works behind the scenes and building things end-to-end has been super
-          exciting. I'm always up for the challenge of figuring out how all the
-          pieces fit together to make a smooth and complete product.
+          Lately, I've been expanding into backend development since I'm aiming
+          to become a full-stack developer. Learning how everything works behind
+          the scenes and building things end-to-end has been super exciting. I'm
+          always up for the challenge of figuring out how all the pieces fit
+          together to make a smooth and complete product.
         </p>
         <p>
           Outside of coding, you'll usually find me playing guitar, gaming, or
@@ -85,16 +84,25 @@ import MainLayout from "../layouts/MainLayout.astro";
           and fun.
         </p>
 
-        <p>
-          I'm always open for collaboration and love connecting with others who
-          are passionate about creating great products. Whether it's a unique
-          project idea, or something creative, feel free to reach out. Let's
-          build something cool together!
-        </p>
+        <div class="flex flex-col gap-2 border border-zinc-800 p-5">
+          <h3 class="text-xl font-bold">Ready to Create Something Awesome?</h3>
+          <p class="text-base">
+            I'm always open for collaboration and love connecting with others
+            who are passionate about creating great products. Whether it's a
+            unique project idea, or something creative, feel free to reach out.
+            Let's build something cool together!
+          </p>
+          <a
+            href="mailto:leonardtarigan.dev@gmail.com"
+            target="_blank"
+            class="mt-5 flex items-center justify-center gap-2 border border-zinc-800 bg-zinc-800 px-5 py-2 text-base text-white transition-colors duration-300 hover:bg-white hover:text-zinc-800"
+            >Reach me out <Icon name={"arrow-up-right-icon"} /></a
+          >
+        </div>
         <div class="grid grid-cols-2 gap-3 sm:grid-cols-3">
           <div>
             <h3 class="font-semibold">Languages</h3>
-            <ul class="list-inside list-disc">
+            <ul class="text-base">
               <li>JavaScript</li>
               <li>TypeScript</li>
               <li>Java</li>
@@ -103,22 +111,22 @@ import MainLayout from "../layouts/MainLayout.astro";
           </div>
           <div>
             <h3 class="font-semibold">Frameworks</h3>
-            <ul class="list-inside list-disc">
+            <ul class="text-base">
               <li>React & Next.js</li>
               <li>Vue & Nuxt.js</li>
               <li>Astro</li>
-              <li>Nest.js</li>
               <li>Tailwind CSS</li>
+              <li>Nest.js</li>
             </ul>
           </div>
           <div>
             <h3 class="font-semibold">Others</h3>
-            <ul class="list-inside list-disc">
-              <li>Figma</li>
+            <ul class="text-base">
               <li>Framer Motion</li>
               <li>Shadcn UI</li>
               <li>Ant Design</li>
               <li>Material UI</li>
+              <li>Figma</li>
               <li>Firebase</li>
               <li>Supabase</li>
             </ul>

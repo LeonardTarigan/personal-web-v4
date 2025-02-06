@@ -7,10 +7,13 @@ import {
   TransitionRoot,
 } from "@headlessui/vue";
 import { navMenus } from "../../../lib/static/nav-menus";
+import normalizePath from "../../../lib/utils/normalizePath";
 
 const { currentPath } = defineProps<{
   currentPath: string;
 }>();
+
+const normalizedCurrentPath = normalizePath(currentPath);
 </script>
 
 <template>
@@ -50,7 +53,7 @@ const { currentPath } = defineProps<{
             :href="item.href"
             :class="[
               'block px-4 py-2 font-medium transition-colors duration-300',
-              currentPath === item.href
+              normalizedCurrentPath === item.href
                 ? 'bg-neutral-800 text-white'
                 : active
                   ? 'bg-white'
