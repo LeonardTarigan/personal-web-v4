@@ -1,7 +1,7 @@
 ---
 categories: ["git", "version control"]
 date: 01/20/2025
-image: https://res.cloudinary.com/dtqfsisit/image/upload/v1738815183/mastering-the-amend-flag_y4kazw.png
+image: https://res.cloudinary.com/dtqfsisit/image/upload/v1738894003/mastering-the-amend-flag_pk6lpg.png
 title: Mastering The Amend Flag
 ---
 
