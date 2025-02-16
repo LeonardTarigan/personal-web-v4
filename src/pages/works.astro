@@ -3,7 +3,23 @@ import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import { projects } from "../lib/static/projects.data";
+import { API_BASE_URL } from "../lib/static/api";
+
+interface IProjectImage {
+  name: string;
+  url: string;
+  rawUrl: string;
+}
+
+interface IProject {
+  name: string;
+  images: IProjectImage[];
+  url: string;
+}
+
+const res = await fetch(`${API_BASE_URL}/19c5590ca95b8089ae0dfc2e35dec206`);
+
+const projects: IProject[] = await res.json();
 ---
 
 <BaseLayout title="Works | Leonard Tarigan">
@@ -33,7 +49,7 @@ import { projects } from "../lib/static/projects.data";
         class="grid w-full grid-cols-1 divide-x divide-y divide-neutral-800 border-b border-neutral-800 sm:grid-cols-2 md:grid-cols-3"
       >
         {
-          projects.map(({ name, image, url }, index) => (
+          projects.map(({ name, images, url }, index) => (
             <a
               href={url}
               target="_blank"
@@ -41,9 +57,11 @@ import { projects } from "../lib/static/projects.data";
               class:list={[{ "border-t border-neutral-800": index === 0 }]}
             >
               <Image
-                src={image}
+                src={images[0].url}
                 alt="Thumbnail"
-                class="aspect-video w-full bg-neutral-200"
+                class="bg-neutral-200"
+                width={1600}
+                height={900}
               />
               <p class="font-medium">{name}</p>
             </a>
