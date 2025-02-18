@@ -40,6 +40,7 @@ const { Content } = await blog.render();
       alt={"Thumb"}
       inferSize
       class={"aspect-[3/2] w-full bg-neutral-200 object-cover"}
+      transition:name={data.title}
     />
     <h2 class="text-3xl font-bold sm:text-4xl">{data.title}</h2>
     <div>
