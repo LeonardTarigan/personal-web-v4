@@ -11,17 +11,16 @@ Have you ever encountered a situation where a user’s rapid input, like typing 
 
 Debouncing is a programming technique used to ensure that a function is only executed after a certain amount of time has passed since it was last called. It’s particularly useful for optimizing performance in scenarios where a function might be triggered repeatedly in a short period, such as:
 
-- **Search input**: When a user types quickly, you don’t want to send a request for every keystroke.
-- **Window resizing**: You might want to recalculate layouts only after the user has finished resizing the window.
-- **Button clicks**: Prevent accidental double-clicks from triggering multiple actions.
+- **Search input**: When a user types quickly, we don’t want to send a request for every keystroke.
+- **Window resizing**: We might want to recalculate layouts only after the user has finished resizing the window.
 
 Without debouncing, these actions could lead to performance issues, unnecessary API calls, or a poor user experience.
 
 ## How Does Debouncing Work?
 
-The idea behind debouncing is simple. Instead of executing a function immediately, you wait for a specified amount of time (e.g., 300ms) to see if the function is called again. If it is, you reset the timer. The function only executes when the timer completes without interruption.
+The idea behind debouncing is simple. Instead of executing a function immediately, we wait for a specified amount of time (e.g., 300ms) to see if the function is called again. If it is, we reset the timer. The function only executes when the timer completes without interruption.
 
-Here’s a simple analogy: imagine you’re waiting for someone to stop talking before you respond. If they keep interrupting, you keep waiting. Only when they’ve stopped talking for a while do you finally respond.
+Here’s a simple analogy. Imagine you’re waiting for someone to stop talking before you respond. If they keep interrupting, you keep waiting. Only when they’ve stopped talking for a while do you finally respond.
 
 ## Search Input Problem
 
@@ -52,9 +51,9 @@ API call for input: hell
 API call for input: hello
 ```
 
-This approach of making API calls for every single keystroke is inefficient and wasteful. In reality, we don't need or might not want to fetch results for partial words like "h", "he", or "hel". We're only interested in searching for the complete term "hello".
+This approach of making API calls for every single keystroke is inefficient and wasteful. In reality, we don't need or might not want to fetch results for partial words like "h", "he", or "hel". We only want to search for the complete term "hello".
 
-Making all these intermediate requests not only puts unnecessary load on our server but can also lead to race conditions where results from an earlier request arrive after more recent ones.
+Making all these intermediate requests not only puts unnecessary load on our server but can also lead to a condition where results from an earlier request arrive after more recent ones.
 
 What we really want is to wait until the user has finished typing (or at least paused briefly) before making the API call. This is exactly where debouncing comes in handy.
 
@@ -86,7 +85,7 @@ export default function DemoApp() {
 }
 ```
 
-Instead of firing off an API call for every character, we now wait for a brief pause after the user stops typing. So, if you type "hello," it waits for you to finish typing or pause for one second before making the API request.
+Instead of firing off an API call for every character, we now wait for a second pause after the user stops typing. So, if you type "hello," it waits for you to finish typing or pause for one second before making the API request.
 
 ```console
 API call for input: hello
@@ -94,4 +93,4 @@ API call for input: hello
 
 ## Conclusion
 
-Debouncing is a simple yet powerful technique that can significantly improve the performance and user experience of your applications. By delaying the execution of a function until a certain amount of time has passed, you can avoid unnecessary computations, API calls, or other resource-intensive operations. It’s a small change that can make a big difference.
+Debouncing is a simple yet powerful technique that can significantly improve the performance and user experience of our applications. By delaying the execution of a function until a certain amount of time has passed, we can avoid unnecessary computations, API calls, or other resource-intensive operations. It’s a small change that can make a big difference.

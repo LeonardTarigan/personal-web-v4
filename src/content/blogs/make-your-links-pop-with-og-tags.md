@@ -1,5 +1,5 @@
 ---
-categories: ["Frontend", "SEO"]
+categories: ["Frontend", "SEO", "Social Media"]
 date: 02/05/2025
 image: https://res.cloudinary.com/dtqfsisit/image/upload/v1738894786/make-your-links-pop-with-og-tags_ecrose.png
 title: Make Your Links Pop with OG Tags
@@ -22,7 +22,7 @@ OG tags play a crucial role in optimizing social media sharing. Here’s why the
 
 ## Implementing OG Tags in Next.js
 
-If you’re using the pages directory in Next.js, you can add OG tags inside the `<Head>` component from next/head:
+If you’re using the pages directory in Next.js, you can add OG tags inside the `<Head>` component from next/head.
 
 ```tsx
 import Head from "next/head";
@@ -46,16 +46,17 @@ export default function HomePage() {
 }
 ```
 
-If you’re using the new app directory introduced in Next.js 13, you can define OG metadata using the metadata object in a layout or page file:
+Or if you’re using the new app directory introduced in Next.js 13, you can define OG metadata using the metadata object in a layout or page file.
 
 ```tsx
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Leonard Tarigan - Software Dev",
+  title: "Leonard Tarigan",
   openGraph: {
-    title: "Leonard Tarigan - Software Dev",
-    description: "Bring your ideas to life!",
+    title: "Leonard Tarigan",
+    description:
+      "Passionate software developer. Let's bring your ideas to life!",
     images: ["https://example.com/og-image.jpg"],
     url: "https://example.com",
     type: "website",
@@ -65,17 +66,17 @@ export const metadata: Metadata = {
 
 ## Implementing OG Tags in Nuxt.js
 
-In Nuxt.js, we can utlize the built-in `useHead` composable to define meta tags, including OG tags
+In Nuxt.js, we can utlize the built-in `useHead` composable to define meta tags, including OG tags.
 
 ```vue
 <script setup lang="ts">
 useHead({
   title: "Leonard Tarigan - Software Dev",
   meta: [
-    { property: "og:title", content: "Leonard Tarigan - Software Dev" },
+    { property: "og:title", content: "Leonard Tarigan" },
     {
       property: "og:description",
-      content: "Bring your ideas to life!",
+      content: "Passionate software developer. Let's bring your ideas to life!",
     },
     { property: "og:image", content: "https://example.com/og-image.jpg" },
     { property: "og:url", content: "https://example.com" },
@@ -90,8 +91,8 @@ Alternatively, you can use `useSeoMeta` that lets you define your meta tags as a
 ```vue
 <script setup lang="ts">
 useSeoMeta({
-  title: "Leonard Tarigan - Software Dev",
-  description: "Bring your ideas to life!",
+  title: "Leonard Tarigan",
+  description: "Passionate software developer. Let's bring your ideas to life!",
   ogTitle: "Leonard Tarigan - Software Dev",
   ogDescription: "Bring your ideas to life!",
   ogImage: "https://example.com/og-image.jpg",
@@ -104,6 +105,8 @@ useSeoMeta({
 ## Checking Your Website’s OG Tags
 
 You can check your website’s existing Open Graph metadata using [opengraph.xyz](https://opengraph.xyz). This website allows you to preview how your webpage appears when shared and helps identify any missing or incorrect OG tags.
+
+![opengraph.xyz Demo](https://res.cloudinary.com/dtqfsisit/image/upload/v1739887386/Make_Your_Links_Pop_with_OG_Tags_-_image_1_e0et27.png)
 
 ## Conclusion
 
