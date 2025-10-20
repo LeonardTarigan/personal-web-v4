@@ -1,6 +1,6 @@
 ---
 categories: ["frontend", "performance"]
-date: 02/04/2025
+date: 2025-02-04
 image: https://res.cloudinary.com/dtqfsisit/image/upload/v1738895230/debounce-for-better-input-performance_ikaw9h.png
 title: Debounce for Better Input Performance
 ---

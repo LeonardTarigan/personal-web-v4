@@ -1,6 +1,6 @@
 ---
 categories: ["Frontend", "SEO", "Social Media"]
-date: 02/05/2025
+date: 2025-02-05
 image: https://res.cloudinary.com/dtqfsisit/image/upload/v1738894786/make-your-links-pop-with-og-tags_ecrose.png
 title: Make Your Links Pop with OG Tags
 ---
