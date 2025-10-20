@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import { getCollection, type CollectionEntry } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import formatRelativeTime from "../lib/utils/formatRelativeTime";
+import RelativeTime from "../components/shared/time/RelativeTime.vue";
 
 const blogs: CollectionEntry<"blogs">[] = await getCollection("blogs");
 const sortedBlogs = blogs.sort(
@@ -30,7 +30,7 @@ const sortedBlogs = blogs.sort(
                   <p class="mt-1 line-clamp-2 leading-tight">{body}</p>
                 </div>
                 <p class="pt-3 font-normal text-neutral-400">
-                  {formatRelativeTime(data.date)}
+                  <RelativeTime client:load date={data.date} />
                 </p>
               </div>
               <Image

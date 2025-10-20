@@ -4,7 +4,7 @@ import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 import readingTime from "reading-time";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import formatRelativeTime from "../../lib/utils/formatRelativeTime";
+import RelativeTime from "../../components/shared/time/RelativeTime.vue";
 
 export const getStaticPaths = async () => {
   const blogs: CollectionEntry<"blogs">[] = await getCollection("blogs");
@@ -46,7 +46,7 @@ const { Content } = await blog.render();
     <div>
       <p class="capitalize">{data.categories.join(", ")}</p>
       <p class="text-base font-normal text-neutral-400">
-        {formatRelativeTime(data.date)} · {readTime}
+        <RelativeTime client:load date={data.date} /> · {readTime}
       </p>
     </div>
     <div class="prose prose-lg pt-10">
