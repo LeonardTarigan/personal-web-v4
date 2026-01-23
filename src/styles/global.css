@@ -9,17 +9,23 @@ body {
   @apply bg-neutral-800 text-white;
 }
 
-/* width */
 ::-webkit-scrollbar {
   @apply w-[7px];
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   @apply border border-neutral-800 bg-white outline outline-1 outline-neutral-800;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   @apply w-1 bg-neutral-800 transition-colors duration-300 hover:bg-neutral-600;
+}
+
+.astro-code {
+  @apply rounded-none;
+}
+
+code::before,
+code::after {
+  content: "" !important;
 }
