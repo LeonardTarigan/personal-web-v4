@@ -147,7 +147,7 @@ If we try to derive a type without using const assertion, the result is far less
 - **Without `as const`**: TypeScript sees the object values as generic strings. When we derive the `AppPath` type, the result is simply `string`. This doesn't help us prevent typos.
 - **With `as const`**: TypeScript locks the values into literal types. The resulting `AppPath` type is exactly `"/home" | "profile" | "/settings" | "/chat"`.
 
-## Full Usage: React Router & Type-Safe Components
+## Full Usage: React Router & Type-Safe Routes
 
 Now that we’ve built our foundation, we can apply this across our entire React application. By combining our `APP_PATHS` object and the derived `AppPath` type, we can create a system where the Source of Truth flows from our configuration directly into our components. This eliminates the need to manually sync our routing logic with our UI links.
 
