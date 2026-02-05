@@ -77,7 +77,7 @@ APP_PATHS.settings = '/setttings';
 
 To solve the widening problem, TypeScript introduced a feature called **const assertion** in version 3.4, released in March 2019.
 
-It is important to note that const assertion is unique to TypeScript. It does not exist in standard JavaScript. While JavaScript has `Object.freeze()`, that only works at runtime. Const assertions, on the other hand, provide protection while we are actually writing our code (compile-time). We are telling the compiler: *"Treat this entire structure as a literal value. It is now deeply read-only, and the values are exact"*.
+It is important to note that const assertion is unique to TypeScript. It does not exist in standard JavaScript. While JavaScript has `Object.freeze()`, that only works at runtime. Const assertions, on the other hand, provide protection while we are actually writing our code (compile-time). We are telling the compiler *"Treat this entire structure as a literal value. It is now deeply read-only, and the values are exact"*.
 
 By adding `as const` to an object, we effectively disable type widening.
 
@@ -211,7 +211,7 @@ export const SidebarMenu = ({
 
 #### Putting it Into Action
 
-Because we are using the `AppPath` type, our component now acts as a "Guard." It will only allow you to pass paths that actually exist in your configuration.
+Because we are using the `AppPath` type, our component now acts as a "Guard." It will only allow us to pass paths that actually exist in our configuration.
 
 ```ts
 // ✅ Perfectly Type-Safe: The compiler knows this exists
