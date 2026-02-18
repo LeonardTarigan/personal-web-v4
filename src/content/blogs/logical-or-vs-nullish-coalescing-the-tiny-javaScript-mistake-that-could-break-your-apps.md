@@ -54,7 +54,7 @@ Even though the user explicitly stored a volume of 0 and disabled autoplay, our 
 
 ## Nullish Coalescing: The Nullish Filter
 
-Nullish coalescing (`??`) was introduced in ES11 back in June 2020. This operator was created specifically to handle the collapsing intent problem. Unlike the OR operator, it doesn't care about the broad list of Falsy 9. Instead, it focuses exclusively on nullish values, specifically `null` and `undefined`.
+Nullish coalescing (`??`) was introduced in ES11 back in June 2020. This operator was created specifically to handle the collapsing intent problem. Unlike the OR operator, it doesn't care about the broad list of falsy 9. Instead, it focuses exclusively on nullish values, specifically `null` and `undefined`.
 
 If we apply this operator to the exact same scenario we just reviewed, we can see the behavior difference.
 
