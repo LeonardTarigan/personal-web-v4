@@ -15,7 +15,7 @@ Now, we’re going back to the basics to see why these two operators are fundame
 
 In JavaScript, every value has an inherent boolean vibe. Even if a variable isn't a literal true or false, JavaScript will treat it as one when we use it in a logical operation. This concept is what we call [Type Coercion](https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion). It means that when JavaScript expects a boolean but gets something else (like a number or a string), it coerces that value into being either **truthy** or **falsy**.
 
-When we call a value **truthy**, we mean that it translates to `true` when evaluated in a boolean context. This is the default state in JavaScript, most values we encounter are truthy. This includes obvious things like the number `1` or the string `"Hello"`, but it also includes surprising things, like an empty array `[]` or an empty object `{}`. Even though they are "empty" containers, they still exist in memory, so JavaScript treats them as truthy.
+When we call a value **truthy**, we mean that it translates to `true` when evaluated in a boolean context. This is the default state in JavaScript, most values we encounter are truthy. This includes obvious things like the number `1` or the string `"Hello"`, but it also includes surprising things, like an empty array `[]` or an empty object `{}`. Even though they are empty containers, they still exist in memory, so JavaScript treats them as truthy.
 
 On the other hand, **falsy** values are the specific exceptions to the rule. These values typically represent some form of absence, zero, or invalidity that JavaScript translates to `false`. Based on the [MDN docs](https://developer.mozilla.org/en-US/docs/Glossary/Falsy), there are exactly nine distinct falsy values in the language that we need to keep in mind:
 
@@ -33,7 +33,7 @@ On the other hand, **falsy** values are the specific exceptions to the rule. The
 
 The Logical OR operator (`||`) is one of the most common tools we use to provide default values. Its behavior is straightforward, it evaluates the expression from left to right and returns the first truthy value it encounters. If all values are falsy, it simply returns the last one.
 
-To see this in practice, let’s look at how we handle user settings fetched from `localStorage`. In production, this data is often incomplete. Maybe the user hasn't visited the settings page yet, or we've just added a new feature that doesn't exist in their local storage yet.
+To see this in practice, let’s look at how we handle user settings fetched from `localStorage`. In production, this data is often incomplete. Maybe the user hasn't visited the settings page, or we've just added a new feature that doesn't exist in their local storage yet.
 ```js
 const rawConfigData = '{"volume": 0, "autoPlay": false}'; // stringified JSON
 const config = JSON.parse(rawConfigData);
