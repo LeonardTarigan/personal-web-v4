@@ -74,6 +74,6 @@ console.log(theme);    // Result: "dark" (Correct!)
 
 By making this one small change, we’ve made our code exponentially more resilient. Because 0 and false are not `null` or `undefined`, the nullish coalescing operator treats them as valid, existing data. It only reaches for the fallback values when the property is truly absent or explicitly set to `null`. This allows us to handle incomplete objects without accidentally overwriting the intentional and valid choices made by our users.
 
-## Conclusion: Right Tool for the Right Case
+## Conclusion: Right Tool for the Right Task
 
 We have seen that the smallest syntax choices often carry the heaviest consequences. Misusing these operators can lead to logic flaws where valid inputs are ignored. When we fail to distinguish between missing data and zero-ish data, we compromise the integrity of our application state. To build reliable software, we have to apply them based on the specific type of data we are handling.
