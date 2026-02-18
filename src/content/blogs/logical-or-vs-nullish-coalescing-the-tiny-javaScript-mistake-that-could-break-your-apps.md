@@ -5,7 +5,7 @@ image: https://res.cloudinary.com/dtqfsisit/image/upload/v1771411386/logical-or-
 title: "Logical OR vs Nullish Coalescing: The Tiny JavaScript Mistake That Could Break Your Apps"
 ---
 
-In our daily work as JavaScript developers, we often reach for shortcuts like logical OR (`||`) or nullish coalescing (`??`) to replace longer ternary operators and keep our code clean. On the surface, these two operations seem to do the exact same thing. They provide a fallback when data is missing.
+In our daily work as JavaScript developers, we often reach for shortcuts like logical OR or nullish coalescing to replace longer ternary operators and keep our code clean. On the surface, these two operations seem to do the exact same thing. They provide a fallback when data is missing.
 
 However, beneath that simple syntax lies a fundamental difference in how JavaScript evaluates empty data. Understanding these core fundamentals isn't just a theoretical exercise, it’s a practical necessity. If we don’t master the basics of how these operators work, one simple line of code can lead to unpredictable behavior in production.
 
