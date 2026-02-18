@@ -1,7 +1,7 @@
 ---
 categories: ["JavaScript"]
 date: 2026-02-18 17:00:00 +07:00
-image: https://res.cloudinary.com/dtqfsisit/image/upload/v1771409633/logical-or-vs-nullish-coalescing-the-tiny-javaScript-mistake-that-could-break-your-apps_fakwr9.png
+image: https://res.cloudinary.com/dtqfsisit/image/upload/v1771411386/logical-or-vs-nullish-coalescing-the-tiny-javaScript-mistake-that-could-break-your-apps-ii_qdcvzi.png
 title: "Logical OR vs Nullish Coalescing: The Tiny JavaScript Mistake That Could Break Your Apps"
 ---
 
