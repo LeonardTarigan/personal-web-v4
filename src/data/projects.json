@@ -1,0 +1,17 @@
+[
+  {
+    "name": "TEDxUniversitasBrawijaya 2025",
+    "url": "tedxuniversitasbrawijaya.org/",
+    "images": ["https://www.notion.so/image/attachment%3A83d6aaec-b7a9-4069-8cc7-f22888d8b233%3Aproject-tedx-2025.png?id=19c5590c-a95b-80ae-9f4a-e96bdeeb3024&table=block&spaceId=4706c5ae-b76c-4cb5-a431-161dd4735a8a&width=2000&userId=a8d6c636-5325-4387-bbd8-773a0a3a6fca&cache=v2"]
+  },
+  {
+    "name": "TEDxUniversitasBrawijaya 2023",
+    "url": "tedxub2023.vercel.app/",
+    "images": ["https://www.notion.so/image/attachment%3Ac81c57af-6144-42a0-901b-be8a38f09486%3Aproject-tedx-2023.png?id=19c5590c-a95b-805e-b6b7-fd733576697f&table=block&spaceId=4706c5ae-b76c-4cb5-a431-161dd4735a8a&width=2000&userId=a8d6c636-5325-4387-bbd8-773a0a3a6fca&cache=v2"]
+  },
+  {
+    "name": "Sky",
+    "url": "sky-weather.vercel.app/",
+    "images": ["https://www.notion.so/image/attachment%3Ac5df6c25-4afa-4401-b512-c14778d49af3%3Aproject-sky.png?id=19c5590c-a95b-8075-aeed-c3aff4afbec9&table=block&spaceId=4706c5ae-b76c-4cb5-a431-161dd4735a8a&width=2000&userId=a8d6c636-5325-4387-bbd8-773a0a3a6fca&cache=v2"]
+  }
+]

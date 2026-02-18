@@ -3,6 +3,7 @@ import { Icon } from "astro-icon/components";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import { API_BASE_URL } from "../lib/static/api";
+import experiencesData from "../data/experiences.json"
 
 interface IExperience {
   title: string;
@@ -11,9 +12,7 @@ interface IExperience {
   endDate?: string;
 }
 
-const res = await fetch(`${API_BASE_URL}/19c5590ca95b80dabe71cf133e16a555`);
-
-const experiences: IExperience[] = await res.json();
+const experiences: IExperience[] = experiencesData
 
 const sortedExperience = experiences.sort((a, b) => {
   if (a.endDate === null && b.endDate !== null) return -1;

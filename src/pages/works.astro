@@ -1,25 +1,17 @@
 ---
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
+import projectsData from "../data/projects.json";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import { API_BASE_URL } from "../lib/static/api";
-
-interface IProjectImage {
-  name: string;
-  url: string;
-  rawUrl: string;
-}
 
 interface IProject {
   name: string;
-  images: IProjectImage[];
+  images: string[];
   url: string;
 }
 
-const res = await fetch(`${API_BASE_URL}/19c5590ca95b8089ae0dfc2e35dec206`);
-
-const projects: IProject[] = await res.json();
+const projects: IProject[] = await projectsData;
 ---
 
 <BaseLayout title="Works | Leonard Tarigan">
@@ -57,7 +49,7 @@ const projects: IProject[] = await res.json();
               class:list={[{ "border-t border-neutral-800": index === 0 }]}
             >
               <Image
-                src={images[0].url}
+                src={images[0]}
                 alt="Thumbnail"
                 class="bg-neutral-200"
                 width={1600}
