@@ -10,4 +10,7 @@ import partytown from "@astrojs/partytown";
 export default defineConfig({
   site: "https://leonardtarigan.dev",
   integrations: [tailwind(), icon(), vue(), sitemap(), partytown()],
+  image: {
+    domains: ["res.cloudinary.com"],
+  },
 });
